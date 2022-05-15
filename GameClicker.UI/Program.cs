@@ -25,7 +25,10 @@ namespace GameClicker.UI
                 Application.Run(mainForm);
             }
         }
-
+        /// <summary>
+        /// test
+        /// </summary>
+        
         private static void ConfigureServices(ServiceCollection services)
         {
             services.AddSingleton<AuthContext>()
