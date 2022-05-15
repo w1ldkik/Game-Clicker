@@ -12,15 +12,11 @@ namespace GameClicker.BLL
     {
         public UserRepository userRepository;
 
-        public LoginService(UserRepository userRepository)
-        {
-            this.userRepository = userRepository;
-        }
+        public LoginService(UserRepository userRepository) => this.userRepository = userRepository;
+        
 
-        public User Login(string login, string password) 
-        {
-            return userRepository.GetUserByLoginAndPassword(login, password);
-        }
+        public User Login(string login, string password) => userRepository.GetUserByLoginAndPassword(login, password);
+        
     }
 
 }
