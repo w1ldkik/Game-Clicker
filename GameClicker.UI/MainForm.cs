@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GameClicker.DAL.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,11 +11,14 @@ using System.Windows.Forms;
 
 namespace GameClicker.UI
 {
+
     public partial class MainForm : Form
     {
-        public MainForm()
+        public User User {get; set;}
+        public MainForm(User User)
         {
             InitializeComponent();
+            this.User = User;
         }
 
         private void exitButton_Click(object sender, EventArgs e)
@@ -25,7 +29,7 @@ namespace GameClicker.UI
         public void inventoryButton_Click(object sender, EventArgs e)
         {
             Hide();
-            var inventoryForm = new InventoryForm();
+            var inventoryForm = new InventoryForm(User);
             inventoryForm.Show();
         }
     }

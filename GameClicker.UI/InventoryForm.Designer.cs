@@ -171,6 +171,7 @@
             this.MaximizeBox = false;
             this.Name = "InventoryForm";
             this.Text = "InventoryForm";
+            this.Load += new System.EventHandler(this.InventoryForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.weapon1PictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.weapon2PictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.weapon3PictureBox)).EndInit();

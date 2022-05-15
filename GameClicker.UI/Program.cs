@@ -12,6 +12,7 @@ namespace GameClicker.UI
         [STAThread]
         static void Main()
         {
+            
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
@@ -24,6 +25,7 @@ namespace GameClicker.UI
                 var mainForm = serviceProvider.GetRequiredService<LoginForm>();
                 Application.Run(mainForm);
             }
+            
         }
         /// <summary>
         /// test
@@ -35,8 +37,10 @@ namespace GameClicker.UI
                     .AddSingleton<LoginForm>()
                     .AddSingleton<UserRepository>()
                     .AddSingleton<RegistrationService>()
-                    .AddSingleton<LoginService>();
+                    .AddSingleton<LoginService>()
+                    .AddSingleton<DataHelper>();
             
         }
+        
     }
 }

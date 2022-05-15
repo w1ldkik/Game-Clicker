@@ -24,7 +24,9 @@ namespace GameClicker.BLL
             var user = new User()
             {
                 Login = login,
-                Password = password
+                Password = password,
+                PetId = 3,
+                WeaponId = 3
             };
             userRepository.AddUser(user);
         }

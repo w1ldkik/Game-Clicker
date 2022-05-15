@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GameClicker.DAL.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,11 @@ namespace GameClicker.UI
 {
     public partial class InventoryForm : Form
     {
-        public InventoryForm()
+        public User User { get; set; }
+        public InventoryForm(User user)
         {
             InitializeComponent();
+            this.User = user;
         }
 
         private void weapon1PictureBox_MouseEnter(object sender, EventArgs e)
@@ -153,6 +156,11 @@ namespace GameClicker.UI
         {
             petPictureBox3.Size = new Size { Width = 160, Height = 160 };
             petPictureBox3.Image = GameClicker.UI.Properties.Resources.dogi;
+        }
+
+        private void InventoryForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

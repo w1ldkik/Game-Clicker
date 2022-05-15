@@ -14,7 +14,6 @@ namespace GameClicker.BLL
 
         public LoginService(UserRepository userRepository) => this.userRepository = userRepository;
         
-
         public User Login(string login, string password) => userRepository.GetUserByLoginAndPassword(login, password);
         
     }

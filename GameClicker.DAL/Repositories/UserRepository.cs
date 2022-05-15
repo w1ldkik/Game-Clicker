@@ -1,4 +1,5 @@
 ﻿using GameClicker.DAL.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,7 +25,8 @@ namespace GameClicker.DAL.Repositories
 
         public User GetUserByLoginAndPassword(string login, string password)
         {
-            return authContext.Users.Where(u => u.Password == password && u.Login == login).FirstOrDefault();
+            return authContext.Users.Where(u => u.Password == password && u.Login == login).Include(x => x.Pet).Include(x => x.Weapon).FirstOrDefault();
         }
+
     }
 }

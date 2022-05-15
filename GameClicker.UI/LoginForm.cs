@@ -1,4 +1,5 @@
 ﻿using GameClicker.BLL;
+using GameClicker.DAL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,13 +17,17 @@ namespace GameClicker.UI
         public RegistrationService registrationService;
 
         public LoginService loginService;
+        public DataHelper dataHelper;
 
-        public LoginForm(RegistrationService registrationService, LoginService loginService)
+        public LoginForm(RegistrationService registrationService, LoginService loginService, DataHelper dataHelper)
         {
+            
             InitializeComponent();
             this.registrationService = registrationService;
             this.loginService = loginService;
-
+            this.dataHelper = dataHelper;
+       //     dataHelper.AddWeapons();
+       //     dataHelper.AddPets();
         }
 
         private void aplyButton_Click(object sender, EventArgs e)
@@ -37,7 +42,7 @@ namespace GameClicker.UI
                 {
                     MessageBox.Show("Succsesful loginnig");
                     Hide();
-                    var mainForm = new MainForm();
+                    var mainForm = new MainForm(user);
                     mainForm.Show();
                 }
                 else 
