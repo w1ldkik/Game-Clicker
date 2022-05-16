@@ -28,5 +28,12 @@ namespace GameClicker.UI
             var inventoryForm = new InventoryForm();
             inventoryForm.Show();
         }
+
+        private void playButton_Click(object sender, EventArgs e)
+        {
+            var preparation = new PreparationForm();
+            this.Hide();
+            preparation.Show();
+        }
     }
 }

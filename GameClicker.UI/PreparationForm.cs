@@ -16,5 +16,13 @@ namespace GameClicker.UI
         {
             InitializeComponent();
         }
+
+        private void backMenuButton_Click(object sender, EventArgs e)
+        {
+            Hide();
+            Form mainform = Application.OpenForms[1];
+            mainform.Show();
+
+        }
     }
 }

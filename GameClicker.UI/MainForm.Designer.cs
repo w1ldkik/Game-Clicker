@@ -52,6 +52,7 @@
             this.playButton.TabIndex = 10;
             this.playButton.Text = "Play";
             this.playButton.UseVisualStyleBackColor = true;
+            this.playButton.Click += new System.EventHandler(this.playButton_Click);
             // 
             // inventoryButton
             // 
