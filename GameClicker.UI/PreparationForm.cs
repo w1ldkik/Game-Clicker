@@ -1,4 +1,6 @@
-﻿using System;
+﻿using GameClicker.BLL;
+using GameClicker.DAL.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,10 +14,15 @@ namespace GameClicker.UI
 {
     public partial class PreparationForm : Form
     {
-        public PreparationForm()
+        public EnemyService enemyService;
+        public DataConteiner dataConteiner;
+        public PreparationForm( EnemyService enemyService, DataConteiner dataConteiner)
         {
             InitializeComponent();
+            this.dataConteiner = dataConteiner;
+            this.enemyService = enemyService;
         }
+
 
         private void backMenuButton_Click(object sender, EventArgs e)
         {
@@ -23,6 +30,15 @@ namespace GameClicker.UI
             Form mainform = Application.OpenForms[1];
             mainform.Show();
 
+        }
+
+        private void PreparationForm_Load(object sender, EventArgs e)
+        {
+            var boss = enemyService.GetEnemyByBossNumber(dataConteiner.User.BossNumber);
+            lvlLabel.Text = boss.BossNumber.ToString();
+            bossNameLabel.Text = boss.Name;
+            bossHpLabel.Text = boss.Hp.ToString();
+            BossHpRegenLabel.Text = boss.HpRegen.ToString();
         }
     }
 }

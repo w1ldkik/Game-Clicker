@@ -30,6 +30,10 @@
         {
             this.fightButton = new System.Windows.Forms.Button();
             this.backMenuButton = new System.Windows.Forms.Button();
+            this.lvlLabel = new System.Windows.Forms.Label();
+            this.bossNameLabel = new System.Windows.Forms.Label();
+            this.bossHpLabel = new System.Windows.Forms.Label();
+            this.BossHpRegenLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // fightButton
@@ -52,16 +56,62 @@
             this.backMenuButton.UseVisualStyleBackColor = true;
             this.backMenuButton.Click += new System.EventHandler(this.backMenuButton_Click);
             // 
+            // lvlLabel
+            // 
+            this.lvlLabel.AutoSize = true;
+            this.lvlLabel.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lvlLabel.Location = new System.Drawing.Point(429, 38);
+            this.lvlLabel.Name = "lvlLabel";
+            this.lvlLabel.Size = new System.Drawing.Size(63, 25);
+            this.lvlLabel.TabIndex = 2;
+            this.lvlLabel.Text = "label1";
+            // 
+            // bossNameLabel
+            // 
+            this.bossNameLabel.AutoSize = true;
+            this.bossNameLabel.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.bossNameLabel.Location = new System.Drawing.Point(429, 78);
+            this.bossNameLabel.Name = "bossNameLabel";
+            this.bossNameLabel.Size = new System.Drawing.Size(63, 25);
+            this.bossNameLabel.TabIndex = 3;
+            this.bossNameLabel.Text = "label2";
+            // 
+            // bossHpLabel
+            // 
+            this.bossHpLabel.AutoSize = true;
+            this.bossHpLabel.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.bossHpLabel.Location = new System.Drawing.Point(429, 121);
+            this.bossHpLabel.Name = "bossHpLabel";
+            this.bossHpLabel.Size = new System.Drawing.Size(63, 25);
+            this.bossHpLabel.TabIndex = 4;
+            this.bossHpLabel.Text = "label3";
+            // 
+            // BossHpRegenLabel
+            // 
+            this.BossHpRegenLabel.AutoSize = true;
+            this.BossHpRegenLabel.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BossHpRegenLabel.Location = new System.Drawing.Point(429, 162);
+            this.BossHpRegenLabel.Name = "BossHpRegenLabel";
+            this.BossHpRegenLabel.Size = new System.Drawing.Size(63, 25);
+            this.BossHpRegenLabel.TabIndex = 5;
+            this.BossHpRegenLabel.Text = "label4";
+            // 
             // PreparationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.BossHpRegenLabel);
+            this.Controls.Add(this.bossHpLabel);
+            this.Controls.Add(this.bossNameLabel);
+            this.Controls.Add(this.lvlLabel);
             this.Controls.Add(this.backMenuButton);
             this.Controls.Add(this.fightButton);
             this.Name = "PreparationForm";
             this.Text = "PreparationForm";
+            this.Load += new System.EventHandler(this.PreparationForm_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -69,5 +119,9 @@
 
         private System.Windows.Forms.Button fightButton;
         private System.Windows.Forms.Button backMenuButton;
+        private System.Windows.Forms.Label lvlLabel;
+        private System.Windows.Forms.Label bossNameLabel;
+        private System.Windows.Forms.Label bossHpLabel;
+        private System.Windows.Forms.Label BossHpRegenLabel;
     }
 }

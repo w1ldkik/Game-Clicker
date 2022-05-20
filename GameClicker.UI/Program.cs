@@ -35,7 +35,13 @@ namespace GameClicker.UI
                     .AddSingleton<LoginForm>()
                     .AddSingleton<UserRepository>()
                     .AddSingleton<RegistrationService>()
-                    .AddSingleton<LoginService>();
+                    .AddSingleton<LoginService>()
+                    .AddSingleton<DataHelper>()
+                    .AddSingleton<EnemyRepository>()
+                    .AddSingleton<EnemyService>()
+                    .AddSingleton<DataConteiner>()
+                    .AddSingleton<MainForm>()
+                    .AddSingleton<PreparationForm>();
             
         }
     }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using GameClicker.DAL.Models;
+using Microsoft.Extensions.DependencyInjection;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,11 @@ namespace GameClicker.UI
 {
     public partial class MainForm : Form
     {
-        public MainForm()
+        public PreparationForm preparationForm;
+        public MainForm(PreparationForm preparationForm)
         {
             InitializeComponent();
+            this.preparationForm = preparationForm;
         }
 
         private void exitButton_Click(object sender, EventArgs e)
@@ -31,9 +35,9 @@ namespace GameClicker.UI
 
         private void playButton_Click(object sender, EventArgs e)
         {
-            var preparation = new PreparationForm();
+           
             this.Hide();
-            preparation.Show();
+            preparationForm.Show();
         }
     }
 }

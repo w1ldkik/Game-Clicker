@@ -24,7 +24,8 @@ namespace GameClicker.BLL
             var user = new User()
             {
                 Login = login,
-                Password = password
+                Password = password,
+                BossNumber = 1
             };
             userRepository.AddUser(user);
         }
