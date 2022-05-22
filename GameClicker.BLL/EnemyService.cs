@@ -11,9 +11,13 @@ namespace GameClicker.BLL
     public class EnemyService
     {
         public EnemyRepository enemyRepository;
-        public EnemyService(EnemyRepository enemyRepository)
+        public UserRepository userRepository;
+        public DataConteiner dataConteiner;
+        public EnemyService(EnemyRepository enemyRepository, UserRepository userRepository, DataConteiner dataConteiner)
         {
             this.enemyRepository = enemyRepository;
+            this.userRepository = userRepository;
+            this.dataConteiner = dataConteiner;
         }
 
         public Enemy GetEnemyByBossNumber(int bossNumber) 
@@ -21,6 +25,11 @@ namespace GameClicker.BLL
             return enemyRepository.GetEnemyByBossNumber(bossNumber);    
         }
 
+        public void ScaleBossLvl() 
+        {
+            dataConteiner.User.BossNumber++;
+            userRepository.Update(dataConteiner.User);
+        }
 
     }
 }

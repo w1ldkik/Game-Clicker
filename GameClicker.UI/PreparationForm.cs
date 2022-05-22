@@ -16,11 +16,14 @@ namespace GameClicker.UI
     {
         public EnemyService enemyService;
         public DataConteiner dataConteiner;
-        public PreparationForm( EnemyService enemyService, DataConteiner dataConteiner)
+        public FightForm fightForm;
+        public PreparationForm( EnemyService enemyService, DataConteiner dataConteiner, FightForm fightForm)
         {
             InitializeComponent();
             this.dataConteiner = dataConteiner;
             this.enemyService = enemyService;
+            this.fightForm = fightForm;
+
         }
 
 
@@ -39,6 +42,11 @@ namespace GameClicker.UI
             bossNameLabel.Text = boss.Name;
             bossHpLabel.Text = boss.Hp.ToString();
             BossHpRegenLabel.Text = boss.HpRegen.ToString();
+        }
+
+        private void fightButton_Click(object sender, EventArgs e)
+        {
+            fightForm.Show();
         }
     }
 }

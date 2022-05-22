@@ -15,6 +15,7 @@ namespace GameClicker.UI
     public partial class MainForm : Form
     {
         public PreparationForm preparationForm;
+        
         public MainForm(PreparationForm preparationForm)
         {
             InitializeComponent();

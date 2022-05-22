@@ -1,4 +1,5 @@
 ﻿using GameClicker.DAL.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace GameClicker.DAL.Repositories
 
         public Enemy GetEnemyByBossNumber(int bossNumber) 
         {
-            return authContext.Enemies.Where(x=>x.BossNumber == bossNumber).FirstOrDefault();
+            return authContext.Enemies.Where(x=>x.BossNumber == bossNumber).AsNoTracking().FirstOrDefault();
         }
     }
 }

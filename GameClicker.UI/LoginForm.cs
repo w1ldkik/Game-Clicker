@@ -21,6 +21,7 @@ namespace GameClicker.UI
         public DataConteiner dataconteiner;
         public MainForm mainForm;
 
+
         public LoginForm(RegistrationService registrationService, LoginService loginService, DataHelper dataHelper, DataConteiner dataconteiner, MainForm mainForm)
         {
             InitializeComponent();
@@ -29,7 +30,9 @@ namespace GameClicker.UI
             this.datahelper = dataHelper;
             this.dataconteiner = dataconteiner;
             this.mainForm = mainForm;
-            //dataHelper.AddEnemy();
+           // dataHelper.AddEnemy();
+           // dataHelper.AddPet();
+           // dataHelper.AddWeapon();
 
         }
 

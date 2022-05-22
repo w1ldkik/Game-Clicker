@@ -45,6 +45,7 @@
             this.fightButton.TabIndex = 0;
             this.fightButton.Text = "Fight!";
             this.fightButton.UseVisualStyleBackColor = true;
+            this.fightButton.Click += new System.EventHandler(this.fightButton_Click);
             // 
             // backMenuButton
             // 
