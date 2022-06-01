@@ -15,7 +15,6 @@ namespace GameClicker.UI
     public partial class LoginForm : Form
     {
         public RegistrationService registrationService;
-
         public LoginService loginService;
         public DataHelper datahelper;
         public DataConteiner dataconteiner;

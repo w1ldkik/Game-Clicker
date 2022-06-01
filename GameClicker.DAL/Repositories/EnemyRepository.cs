@@ -20,5 +20,10 @@ namespace GameClicker.DAL.Repositories
         {
             return authContext.Enemies.Where(x=>x.BossNumber == bossNumber).AsNoTracking().FirstOrDefault();
         }
+
+        public int GetBossQuantity()
+        {
+            return authContext.Enemies.Select(x => x).Count();
+        }
     }
 }

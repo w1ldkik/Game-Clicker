@@ -64,13 +64,13 @@ namespace GameClicker.DAL
                     Name = "Roshan",
                     BossNumber = 1,
                     Hp = 2000,
-                    HpRegen = 5
+                    HpRegen = 20
                 },
                 new Enemy(){
                     Name = "Leviofan",
                     BossNumber = 2,
                     Hp = 5000,
-                    HpRegen = 10
+                    HpRegen = 50
                 }
                 
             };

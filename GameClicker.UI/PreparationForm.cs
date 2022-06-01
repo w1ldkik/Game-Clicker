@@ -38,10 +38,16 @@ namespace GameClicker.UI
         private void PreparationForm_Load(object sender, EventArgs e)
         {
             var boss = enemyService.GetEnemyByBossNumber(dataConteiner.User.BossNumber);
-            lvlLabel.Text = boss.BossNumber.ToString();
-            bossNameLabel.Text = boss.Name;
-            bossHpLabel.Text = boss.Hp.ToString();
-            BossHpRegenLabel.Text = boss.HpRegen.ToString();
+            if (boss is not null)
+            {
+                lvlLabel.Text = boss.BossNumber.ToString();
+                bossNameLabel.Text = boss.Name;
+                bossHpLabel.Text = boss.Hp.ToString();
+                BossHpRegenLabel.Text = boss.HpRegen.ToString();
+            }
+            else {
+                MessageBox.Show("Test");
+            }
         }
 
         private void fightButton_Click(object sender, EventArgs e)

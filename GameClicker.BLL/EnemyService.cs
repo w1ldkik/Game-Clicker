@@ -27,9 +27,13 @@ namespace GameClicker.BLL
 
         public void ScaleBossLvl() 
         {
-            dataConteiner.User.BossNumber++;
-            userRepository.Update(dataConteiner.User);
+            if (enemyRepository.GetBossQuantity() < dataConteiner.User.BossNumber) 
+            {
+                dataConteiner.User.BossNumber++;
+                userRepository.Update(dataConteiner.User);
+            }
         }
 
+        
     }
 }
