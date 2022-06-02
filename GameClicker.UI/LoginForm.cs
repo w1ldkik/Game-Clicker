@@ -68,5 +68,7 @@ namespace GameClicker.UI
         {
             Application.Exit();
         }
+
+
     }
 }

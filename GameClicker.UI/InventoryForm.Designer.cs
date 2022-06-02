@@ -47,7 +47,7 @@
             // 
             // backToMenuButton
             // 
-            this.backToMenuButton.Location = new System.Drawing.Point(5, 421);
+            this.backToMenuButton.Location = new System.Drawing.Point(12, 412);
             this.backToMenuButton.Name = "backToMenuButton";
             this.backToMenuButton.Size = new System.Drawing.Size(146, 37);
             this.backToMenuButton.TabIndex = 0;
@@ -58,7 +58,9 @@
             // selectWeaponLabel
             // 
             this.selectWeaponLabel.AutoSize = true;
+            this.selectWeaponLabel.BackColor = System.Drawing.Color.Transparent;
             this.selectWeaponLabel.Font = new System.Drawing.Font("Snap ITC", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.selectWeaponLabel.ForeColor = System.Drawing.Color.Crimson;
             this.selectWeaponLabel.Location = new System.Drawing.Point(262, 9);
             this.selectWeaponLabel.Name = "selectWeaponLabel";
             this.selectWeaponLabel.Size = new System.Drawing.Size(253, 27);
@@ -107,7 +109,9 @@
             // selectPetLabel
             // 
             this.selectPetLabel.AutoSize = true;
+            this.selectPetLabel.BackColor = System.Drawing.Color.Transparent;
             this.selectPetLabel.Font = new System.Drawing.Font("Snap ITC", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.selectPetLabel.ForeColor = System.Drawing.Color.Crimson;
             this.selectPetLabel.Location = new System.Drawing.Point(279, 216);
             this.selectPetLabel.Name = "selectPetLabel";
             this.selectPetLabel.Size = new System.Drawing.Size(206, 27);
@@ -157,7 +161,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 461);
+            this.BackgroundImage = global::GameClicker.UI.Properties.Resources.background;
+            this.ClientSize = new System.Drawing.Size(780, 457);
             this.Controls.Add(this.petPictureBox3);
             this.Controls.Add(this.petPictureBox2);
             this.Controls.Add(this.petPictureBox1);

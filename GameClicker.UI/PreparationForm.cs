@@ -40,18 +40,29 @@ namespace GameClicker.UI
             var boss = enemyService.GetEnemyByBossNumber(dataConteiner.User.BossNumber);
             if (boss is not null)
             {
-                lvlLabel.Text = boss.BossNumber.ToString();
+                lvlLabel.Text = "Level: " + boss.BossNumber.ToString();
                 bossNameLabel.Text = boss.Name;
-                bossHpLabel.Text = boss.Hp.ToString();
-                BossHpRegenLabel.Text = boss.HpRegen.ToString();
+                bossHpLabel.Text = "Boss HP: " + boss.Hp.ToString();
+                BossHpRegenLabel.Text = "Boss HP regen: " + boss.HpRegen.ToString() +"% per second";
             }
-            else {
+            else 
+            {
                 MessageBox.Show("Test");
             }
+            switch(boss.BossNumber.ToString())
+            {
+                case "1":
+                    bossPictureBox.Image = GameClicker.UI.Properties.Resources.bossRoshan;
+                    break;
+                default: 
+                    break;
+            }
+            
         }
 
         private void fightButton_Click(object sender, EventArgs e)
         {
+            Hide();
             fightForm.Show();
         }
     }

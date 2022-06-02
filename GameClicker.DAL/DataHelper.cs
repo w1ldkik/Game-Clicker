@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace GameClicker.DAL
 {
@@ -33,6 +34,7 @@ namespace GameClicker.DAL
             };
             authContext.Pets.AddRange(pets);
             authContext.SaveChanges();
+             
         }
 
         public void AddWeapon()

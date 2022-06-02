@@ -34,6 +34,8 @@
             this.bossNameLabel = new System.Windows.Forms.Label();
             this.bossHpLabel = new System.Windows.Forms.Label();
             this.BossHpRegenLabel = new System.Windows.Forms.Label();
+            this.bossPictureBox = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.bossPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // fightButton
@@ -60,7 +62,9 @@
             // lvlLabel
             // 
             this.lvlLabel.AutoSize = true;
+            this.lvlLabel.BackColor = System.Drawing.Color.Transparent;
             this.lvlLabel.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lvlLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lvlLabel.Location = new System.Drawing.Point(429, 38);
             this.lvlLabel.Name = "lvlLabel";
             this.lvlLabel.Size = new System.Drawing.Size(63, 25);
@@ -70,18 +74,22 @@
             // bossNameLabel
             // 
             this.bossNameLabel.AutoSize = true;
-            this.bossNameLabel.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.bossNameLabel.Location = new System.Drawing.Point(429, 78);
+            this.bossNameLabel.BackColor = System.Drawing.Color.Transparent;
+            this.bossNameLabel.Font = new System.Drawing.Font("Showcard Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.bossNameLabel.ForeColor = System.Drawing.Color.Crimson;
+            this.bossNameLabel.Location = new System.Drawing.Point(154, 393);
             this.bossNameLabel.Name = "bossNameLabel";
-            this.bossNameLabel.Size = new System.Drawing.Size(63, 25);
+            this.bossNameLabel.Size = new System.Drawing.Size(105, 33);
             this.bossNameLabel.TabIndex = 3;
             this.bossNameLabel.Text = "label2";
             // 
             // bossHpLabel
             // 
             this.bossHpLabel.AutoSize = true;
+            this.bossHpLabel.BackColor = System.Drawing.Color.Transparent;
             this.bossHpLabel.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.bossHpLabel.Location = new System.Drawing.Point(429, 121);
+            this.bossHpLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.bossHpLabel.Location = new System.Drawing.Point(429, 87);
             this.bossHpLabel.Name = "bossHpLabel";
             this.bossHpLabel.Size = new System.Drawing.Size(63, 25);
             this.bossHpLabel.TabIndex = 4;
@@ -90,18 +98,31 @@
             // BossHpRegenLabel
             // 
             this.BossHpRegenLabel.AutoSize = true;
+            this.BossHpRegenLabel.BackColor = System.Drawing.Color.Transparent;
             this.BossHpRegenLabel.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BossHpRegenLabel.Location = new System.Drawing.Point(429, 162);
+            this.BossHpRegenLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.BossHpRegenLabel.Location = new System.Drawing.Point(429, 139);
             this.BossHpRegenLabel.Name = "BossHpRegenLabel";
             this.BossHpRegenLabel.Size = new System.Drawing.Size(63, 25);
             this.BossHpRegenLabel.TabIndex = 5;
             this.BossHpRegenLabel.Text = "label4";
             // 
+            // bossPictureBox
+            // 
+            this.bossPictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.bossPictureBox.Location = new System.Drawing.Point(31, 38);
+            this.bossPictureBox.Name = "bossPictureBox";
+            this.bossPictureBox.Size = new System.Drawing.Size(350, 350);
+            this.bossPictureBox.TabIndex = 6;
+            this.bossPictureBox.TabStop = false;
+            // 
             // PreparationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImage = global::GameClicker.UI.Properties.Resources.background;
+            this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Controls.Add(this.bossPictureBox);
             this.Controls.Add(this.BossHpRegenLabel);
             this.Controls.Add(this.bossHpLabel);
             this.Controls.Add(this.bossNameLabel);
@@ -111,6 +132,7 @@
             this.Name = "PreparationForm";
             this.Text = "PreparationForm";
             this.Load += new System.EventHandler(this.PreparationForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.bossPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -124,5 +146,6 @@
         private System.Windows.Forms.Label bossNameLabel;
         private System.Windows.Forms.Label bossHpLabel;
         private System.Windows.Forms.Label BossHpRegenLabel;
+        private System.Windows.Forms.PictureBox bossPictureBox;
     }
 }

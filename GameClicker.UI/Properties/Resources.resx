@@ -118,58 +118,67 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="dogi" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dogi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="dogiBig" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dogiBig.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="dogiBigDescr" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dogiBigDescr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="dubina" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dubina.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="dubinaBig" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dubinaBig.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="dubinaBigDiscr" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dubinaBigDiscr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="homka" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\homka.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="homkaBig" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\homkaBig.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="homkaBigDescription" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\homkaBigDescription.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="kitty" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\kitty.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="kittyBig" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\kittyBig.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bossRoshan" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bossRoshan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="kittyBigDescr" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\kittyBigDescr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pan" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="dogi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dogi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="panBig" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\panBig.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="swordBigDescr" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\swordBigDescr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="panBigDiscr" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\panBigDiscr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="sword" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sword.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="kittyBig" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kittyBig.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="swordBig" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\swordBig.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="swordBigDescr" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\swordBigDescr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="panBig" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\panBig.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dogiBig" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dogiBig.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dubinaBig" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dubinaBig.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pan" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="дада" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\дада.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dogiBigDescr" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dogiBigDescr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="homka" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\homka.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="kitty" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kitty.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="panBigDiscr" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\panBigDiscr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dubinaBigDiscr" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dubinaBigDiscr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sword" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sword.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="homkaBig" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\homkaBig.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dubina" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dubina.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="homkaBigDescription" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\homkaBigDescription.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

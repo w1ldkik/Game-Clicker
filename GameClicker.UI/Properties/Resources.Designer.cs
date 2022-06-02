@@ -63,6 +63,26 @@ namespace GameClicker.UI.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap background {
+            get {
+                object obj = ResourceManager.GetObject("background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bossRoshan {
+            get {
+                object obj = ResourceManager.GetObject("bossRoshan", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap dogi {
             get {
                 object obj = ResourceManager.GetObject("dogi", resourceCulture);
@@ -236,6 +256,16 @@ namespace GameClicker.UI.Properties {
         internal static System.Drawing.Bitmap swordBigDescr {
             get {
                 object obj = ResourceManager.GetObject("swordBigDescr", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap дада {
+            get {
+                object obj = ResourceManager.GetObject("дада", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

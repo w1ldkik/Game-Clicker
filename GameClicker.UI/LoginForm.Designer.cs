@@ -42,44 +42,54 @@
             // loginLabel
             // 
             this.loginLabel.AutoSize = true;
-            this.loginLabel.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.loginLabel.Location = new System.Drawing.Point(348, 142);
+            this.loginLabel.BackColor = System.Drawing.Color.Transparent;
+            this.loginLabel.Font = new System.Drawing.Font("Stencil", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.loginLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.loginLabel.Location = new System.Drawing.Point(348, 146);
             this.loginLabel.Name = "loginLabel";
-            this.loginLabel.Size = new System.Drawing.Size(58, 23);
+            this.loginLabel.Size = new System.Drawing.Size(60, 19);
             this.loginLabel.TabIndex = 0;
             this.loginLabel.Text = "Login:";
             // 
             // passwordLabel
             // 
             this.passwordLabel.AutoSize = true;
-            this.passwordLabel.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.passwordLabel.Location = new System.Drawing.Point(336, 212);
+            this.passwordLabel.BackColor = System.Drawing.Color.Transparent;
+            this.passwordLabel.Font = new System.Drawing.Font("Stencil", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.passwordLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.passwordLabel.Location = new System.Drawing.Point(334, 216);
             this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(86, 23);
+            this.passwordLabel.Size = new System.Drawing.Size(96, 19);
             this.passwordLabel.TabIndex = 1;
             this.passwordLabel.Text = "Password:";
             // 
             // loginRadioButton
             // 
             this.loginRadioButton.AutoSize = true;
+            this.loginRadioButton.BackColor = System.Drawing.Color.Transparent;
             this.loginRadioButton.Checked = true;
+            this.loginRadioButton.Font = new System.Drawing.Font("Segoe UI Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.loginRadioButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.loginRadioButton.Location = new System.Drawing.Point(334, 312);
             this.loginRadioButton.Name = "loginRadioButton";
-            this.loginRadioButton.Size = new System.Drawing.Size(55, 19);
+            this.loginRadioButton.Size = new System.Drawing.Size(59, 19);
             this.loginRadioButton.TabIndex = 2;
             this.loginRadioButton.TabStop = true;
             this.loginRadioButton.Text = "Login";
-            this.loginRadioButton.UseVisualStyleBackColor = true;
+            this.loginRadioButton.UseVisualStyleBackColor = false;
             // 
             // registrationRadioButton
             // 
             this.registrationRadioButton.AutoSize = true;
+            this.registrationRadioButton.BackColor = System.Drawing.Color.Transparent;
+            this.registrationRadioButton.Font = new System.Drawing.Font("Segoe UI Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.registrationRadioButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.registrationRadioButton.Location = new System.Drawing.Point(336, 287);
             this.registrationRadioButton.Name = "registrationRadioButton";
-            this.registrationRadioButton.Size = new System.Drawing.Size(88, 19);
+            this.registrationRadioButton.Size = new System.Drawing.Size(100, 19);
             this.registrationRadioButton.TabIndex = 3;
             this.registrationRadioButton.Text = "Registration";
-            this.registrationRadioButton.UseVisualStyleBackColor = true;
+            this.registrationRadioButton.UseVisualStyleBackColor = false;
             // 
             // loginTextBox
             // 
@@ -118,7 +128,9 @@
             // greatestGameLabel
             // 
             this.greatestGameLabel.AutoSize = true;
+            this.greatestGameLabel.BackColor = System.Drawing.Color.Transparent;
             this.greatestGameLabel.Font = new System.Drawing.Font("Snap ITC", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.greatestGameLabel.ForeColor = System.Drawing.Color.Crimson;
             this.greatestGameLabel.Location = new System.Drawing.Point(90, 42);
             this.greatestGameLabel.Name = "greatestGameLabel";
             this.greatestGameLabel.Size = new System.Drawing.Size(595, 48);
@@ -129,7 +141,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 461);
+            this.BackgroundImage = global::GameClicker.UI.Properties.Resources.background;
+            this.ClientSize = new System.Drawing.Size(780, 457);
             this.Controls.Add(this.greatestGameLabel);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.aplyButton);

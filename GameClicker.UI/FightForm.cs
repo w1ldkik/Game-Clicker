@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -19,11 +20,13 @@ namespace GameClicker.UI
         public EnemyService enemyService;
         private Enemy enemy;
         private double bossMaxHp;
-        public FightForm(DataConteiner dataConteiner, EnemyService enemyService)
+       
+        public FightForm(DataConteiner dataConteiner, EnemyService enemyService )
         {
             InitializeComponent();
             this.dataConteiner = dataConteiner;
             this.enemyService = enemyService;
+            
             
         }
 
@@ -40,7 +43,9 @@ namespace GameClicker.UI
                 timer1.Stop();
                 // Победа над боссом визуал
                 enemyService.ScaleBossLvl();
+                
                 this.Hide();
+                
                 
             }
 
@@ -49,13 +54,21 @@ namespace GameClicker.UI
 
         private void FightForm_Load(object sender, EventArgs e)
         {
-            
             enemy = enemyService.GetEnemyByBossNumber(dataConteiner.User.BossNumber);
             enemy.HpRegen = enemy.HpRegen * (1 - dataConteiner.User.Pet.DecreaseHpRegen / 100);
             bossMaxHp = enemy.Hp;
             timer1.Interval = 1000;
             timer1.Start();
-            hpLabel.Text = enemy.Hp.ToString();
+            hpLabel.Text ="HP: " + enemy.Hp.ToString();
+            hpRegenLabel.Text = "+" + enemy.HpRegen.ToString() + " HP/second";
+            switch (enemy.BossNumber)
+            {
+                case 1:
+                    bossPictureBox.Image = GameClicker.UI.Properties.Resources.bossRoshan;
+                    break;
+                default:
+                    break;
+            }
         }
 
         
@@ -67,6 +80,7 @@ namespace GameClicker.UI
                 {
                     hpLabel.Text = enemy.Hp.ToString();
                     enemy.Hp = enemy.Hp + enemy.HpRegen;
+                    
                 }
                 else
                 {
@@ -74,5 +88,7 @@ namespace GameClicker.UI
                 }
             }
         }
+
+        
     }
 }

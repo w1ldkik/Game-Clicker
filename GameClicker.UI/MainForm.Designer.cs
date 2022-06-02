@@ -37,7 +37,9 @@
             // greatestGameLabel
             // 
             this.greatestGameLabel.AutoSize = true;
+            this.greatestGameLabel.BackColor = System.Drawing.Color.Transparent;
             this.greatestGameLabel.Font = new System.Drawing.Font("Snap ITC", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.greatestGameLabel.ForeColor = System.Drawing.Color.Crimson;
             this.greatestGameLabel.Location = new System.Drawing.Point(90, 42);
             this.greatestGameLabel.Name = "greatestGameLabel";
             this.greatestGameLabel.Size = new System.Drawing.Size(595, 48);
@@ -78,7 +80,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 461);
+            this.BackgroundImage = global::GameClicker.UI.Properties.Resources.background;
+            this.ClientSize = new System.Drawing.Size(780, 457);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.inventoryButton);
             this.Controls.Add(this.playButton);

@@ -29,46 +29,64 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.bossPictureBox = new System.Windows.Forms.PictureBox();
             this.hpLabel = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.hpRegenLabel = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.bossPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // bossPictureBox
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(385, 62);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(303, 333);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.bossPictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.bossPictureBox.Location = new System.Drawing.Point(209, 54);
+            this.bossPictureBox.Name = "bossPictureBox";
+            this.bossPictureBox.Size = new System.Drawing.Size(350, 350);
+            this.bossPictureBox.TabIndex = 0;
+            this.bossPictureBox.TabStop = false;
+            this.bossPictureBox.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // hpLabel
             // 
             this.hpLabel.AutoSize = true;
+            this.hpLabel.BackColor = System.Drawing.Color.Transparent;
             this.hpLabel.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.hpLabel.Location = new System.Drawing.Point(387, 11);
+            this.hpLabel.ForeColor = System.Drawing.Color.Crimson;
+            this.hpLabel.Location = new System.Drawing.Point(307, 9);
             this.hpLabel.Name = "hpLabel";
-            this.hpLabel.Size = new System.Drawing.Size(94, 40);
+            this.hpLabel.Size = new System.Drawing.Size(161, 40);
             this.hpLabel.TabIndex = 1;
-            this.hpLabel.Text = "label1";
+            this.hpLabel.Text = "000000000";
             // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // hpRegenLabel
+            // 
+            this.hpRegenLabel.AutoSize = true;
+            this.hpRegenLabel.BackColor = System.Drawing.Color.Transparent;
+            this.hpRegenLabel.Font = new System.Drawing.Font("Segoe UI Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.hpRegenLabel.ForeColor = System.Drawing.Color.LawnGreen;
+            this.hpRegenLabel.Location = new System.Drawing.Point(43, 374);
+            this.hpRegenLabel.Name = "hpRegenLabel";
+            this.hpRegenLabel.Size = new System.Drawing.Size(72, 30);
+            this.hpRegenLabel.TabIndex = 2;
+            this.hpRegenLabel.Text = "label1";
+            // 
             // FightForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1069, 589);
+            this.BackgroundImage = global::GameClicker.UI.Properties.Resources.background;
+            this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Controls.Add(this.hpRegenLabel);
             this.Controls.Add(this.hpLabel);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.bossPictureBox);
             this.Name = "FightForm";
             this.Text = "FightForm";
             this.Load += new System.EventHandler(this.FightForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bossPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -76,8 +94,9 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox bossPictureBox;
         private System.Windows.Forms.Label hpLabel;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label hpRegenLabel;
     }
 }
