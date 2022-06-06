@@ -15,13 +15,14 @@ namespace GameClicker.UI
 {
     public partial class FightForm : Form
     {
-        
+        private string PreparationFormName { get; set; } = "PreparationForm";
         public DataConteiner dataConteiner;
         public EnemyService enemyService;
         private Enemy enemy;
         private double bossMaxHp;
+
        
-        public FightForm(DataConteiner dataConteiner, EnemyService enemyService )
+        public FightForm(DataConteiner dataConteiner, EnemyService enemyService)
         {
             InitializeComponent();
             this.dataConteiner = dataConteiner;
@@ -40,10 +41,12 @@ namespace GameClicker.UI
             }
             else 
             {
+                enemyService.ScaleBossLvl();
                 timer1.Stop();
                 // Победа над боссом визуал
-                enemyService.ScaleBossLvl();
-                
+                var preparationForm = (PreparationForm) Application.OpenForms.Cast<Form>().Where(x=>x.Name == PreparationFormName).FirstOrDefault()!;
+                preparationForm.RefreshDataSource();
+                preparationForm.Show();
                 this.Hide();
                 
                 
@@ -54,21 +57,7 @@ namespace GameClicker.UI
 
         private void FightForm_Load(object sender, EventArgs e)
         {
-            enemy = enemyService.GetEnemyByBossNumber(dataConteiner.User.BossNumber);
-            enemy.HpRegen = enemy.HpRegen * (1 - dataConteiner.User.Pet.DecreaseHpRegen / 100);
-            bossMaxHp = enemy.Hp;
-            timer1.Interval = 1000;
-            timer1.Start();
-            hpLabel.Text ="HP: " + enemy.Hp.ToString();
-            hpRegenLabel.Text = "+" + enemy.HpRegen.ToString() + " HP/second";
-            switch (enemy.BossNumber)
-            {
-                case 1:
-                    bossPictureBox.Image = GameClicker.UI.Properties.Resources.bossRoshan;
-                    break;
-                default:
-                    break;
-            }
+            RefreshDataSource();
         }
 
         
@@ -88,7 +77,26 @@ namespace GameClicker.UI
                 }
             }
         }
-
+        public void RefreshDataSource()
+        {
+            enemy = enemyService.GetEnemyByBossNumber(dataConteiner.User.BossNumber);
+            enemy.HpRegen = enemy.HpRegen * (1 - dataConteiner.User.Pet.DecreaseHpRegen / 100);
+            bossMaxHp = enemy.Hp;
+            timer1.Interval = 1000;
+            timer1.Start();
+            hpLabel.Text = "HP: " + enemy.Hp.ToString();
+            damageLabel.Text = dataConteiner.User.Weapon.Damage.ToString() + " Damage/click";
+            hpRegenLabel.Text = "+" + enemy.HpRegen.ToString() + " HP/second";
+            switch (enemy.BossNumber)
+            {
+                case 1:
+                    bossPictureBox.Image = GameClicker.UI.Properties.Resources.bossRoshan;
+                    break;
+                default:
+                    break;
+            }
+        }
+           
         
     }
 }

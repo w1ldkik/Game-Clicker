@@ -76,6 +76,7 @@
             this.weapon1PictureBox.Size = new System.Drawing.Size(160, 160);
             this.weapon1PictureBox.TabIndex = 2;
             this.weapon1PictureBox.TabStop = false;
+            this.weapon1PictureBox.Click += new System.EventHandler(this.weapon1PictureBox_Click);
             this.weapon1PictureBox.MouseEnter += new System.EventHandler(this.weapon1PictureBox_MouseEnter);
             this.weapon1PictureBox.MouseLeave += new System.EventHandler(this.weapon1PictureBox_MouseLeave);
             this.weapon1PictureBox.MouseHover += new System.EventHandler(this.weapon1PictureBox_MouseHover);
@@ -89,6 +90,7 @@
             this.weapon2PictureBox.Size = new System.Drawing.Size(160, 160);
             this.weapon2PictureBox.TabIndex = 3;
             this.weapon2PictureBox.TabStop = false;
+            this.weapon2PictureBox.Click += new System.EventHandler(this.weapon2PictureBox_Click);
             this.weapon2PictureBox.MouseEnter += new System.EventHandler(this.weapon2PictureBox_MouseEnter);
             this.weapon2PictureBox.MouseLeave += new System.EventHandler(this.weapon2PictureBox_MouseLeave);
             this.weapon2PictureBox.MouseHover += new System.EventHandler(this.weapon2PictureBox_MouseHover);
@@ -176,6 +178,7 @@
             this.MaximizeBox = false;
             this.Name = "InventoryForm";
             this.Text = "InventoryForm";
+            this.Load += new System.EventHandler(this.InventoryForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.weapon1PictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.weapon2PictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.weapon3PictureBox)).EndInit();

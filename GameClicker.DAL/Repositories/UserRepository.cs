@@ -25,7 +25,7 @@ namespace GameClicker.DAL.Repositories
 
         public User GetUserByLoginAndPassword(string login, string password)
         {
-            return authContext.Users.Where(u => u.Password == password && u.Login == login).AsNoTracking().Include(x=>x.Pet).Include(x => x.Weapon).FirstOrDefault();
+            return authContext.Users.Where(u => u.Password == password && u.Login == login).Include(x=>x.Pet).Include(x => x.Weapon).FirstOrDefault();
         }
 
         public void Update(User updatedUser) 

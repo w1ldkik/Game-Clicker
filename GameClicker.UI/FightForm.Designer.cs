@@ -33,6 +33,7 @@
             this.hpLabel = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.hpRegenLabel = new System.Windows.Forms.Label();
+            this.damageLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bossPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,12 +75,25 @@
             this.hpRegenLabel.TabIndex = 2;
             this.hpRegenLabel.Text = "label1";
             // 
+            // damageLabel
+            // 
+            this.damageLabel.AutoSize = true;
+            this.damageLabel.BackColor = System.Drawing.Color.Transparent;
+            this.damageLabel.Font = new System.Drawing.Font("Segoe UI Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.damageLabel.ForeColor = System.Drawing.Color.Crimson;
+            this.damageLabel.Location = new System.Drawing.Point(598, 378);
+            this.damageLabel.Name = "damageLabel";
+            this.damageLabel.Size = new System.Drawing.Size(67, 25);
+            this.damageLabel.TabIndex = 3;
+            this.damageLabel.Text = "label1";
+            // 
             // FightForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::GameClicker.UI.Properties.Resources.background;
             this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Controls.Add(this.damageLabel);
             this.Controls.Add(this.hpRegenLabel);
             this.Controls.Add(this.hpLabel);
             this.Controls.Add(this.bossPictureBox);
@@ -98,5 +112,6 @@
         private System.Windows.Forms.Label hpLabel;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label hpRegenLabel;
+        private System.Windows.Forms.Label damageLabel;
     }
 }

@@ -1,4 +1,6 @@
-﻿using GameClicker.DAL.Models;
+﻿using GameClicker.BLL;
+using GameClicker.DAL;
+using GameClicker.DAL.Models;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -15,11 +17,15 @@ namespace GameClicker.UI
     public partial class MainForm : Form
     {
         public PreparationForm preparationForm;
+        public DataConteiner dataConteiner;
+        public AuthContext authContext;
         
-        public MainForm(PreparationForm preparationForm)
+        public MainForm(PreparationForm preparationForm, DataConteiner dataConteiner)
         {
             InitializeComponent();
             this.preparationForm = preparationForm;
+            this.dataConteiner = dataConteiner;
+
         }
 
         private void exitButton_Click(object sender, EventArgs e)
@@ -30,7 +36,7 @@ namespace GameClicker.UI
         public void inventoryButton_Click(object sender, EventArgs e)
         {
             Hide();
-            var inventoryForm = new InventoryForm();
+            var inventoryForm = new InventoryForm(dataConteiner, authContext);
             inventoryForm.Show();
         }
 

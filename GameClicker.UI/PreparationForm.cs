@@ -37,31 +37,36 @@ namespace GameClicker.UI
 
         private void PreparationForm_Load(object sender, EventArgs e)
         {
+            RefreshDataSource();
+            
+        }
+
+        public void RefreshDataSource()
+        {
             var boss = enemyService.GetEnemyByBossNumber(dataConteiner.User.BossNumber);
             if (boss is not null)
             {
                 lvlLabel.Text = "Level: " + boss.BossNumber.ToString();
                 bossNameLabel.Text = boss.Name;
                 bossHpLabel.Text = "Boss HP: " + boss.Hp.ToString();
-                BossHpRegenLabel.Text = "Boss HP regen: " + boss.HpRegen.ToString() +"% per second";
+                BossHpRegenLabel.Text = "Boss HP regen: " + boss.HpRegen.ToString() + "% per second";
             }
-            else 
+            else
             {
                 MessageBox.Show("Test");
             }
-            switch(boss.BossNumber.ToString())
+            switch (boss.BossNumber.ToString())
             {
                 case "1":
                     bossPictureBox.Image = GameClicker.UI.Properties.Resources.bossRoshan;
                     break;
-                default: 
+                default:
                     break;
             }
-            
         }
-
         private void fightButton_Click(object sender, EventArgs e)
         {
+            fightForm.RefreshDataSource();
             Hide();
             fightForm.Show();
         }
