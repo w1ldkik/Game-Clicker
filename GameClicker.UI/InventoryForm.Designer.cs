@@ -37,12 +37,16 @@
             this.petPictureBox1 = new System.Windows.Forms.PictureBox();
             this.petPictureBox2 = new System.Windows.Forms.PictureBox();
             this.petPictureBox3 = new System.Windows.Forms.PictureBox();
+            this.weaponSelectedPictureBox = new System.Windows.Forms.PictureBox();
+            this.petSelectedPictureBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.weapon1PictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.weapon2PictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.weapon3PictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.petPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.petPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.petPictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.weaponSelectedPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.petSelectedPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // backToMenuButton
@@ -104,6 +108,7 @@
             this.weapon3PictureBox.Size = new System.Drawing.Size(160, 160);
             this.weapon3PictureBox.TabIndex = 4;
             this.weapon3PictureBox.TabStop = false;
+            this.weapon3PictureBox.Click += new System.EventHandler(this.weapon3PictureBox_Click);
             this.weapon3PictureBox.MouseEnter += new System.EventHandler(this.weapon3PictureBox_MouseEnter);
             this.weapon3PictureBox.MouseLeave += new System.EventHandler(this.weapon3PictureBox_MouseLeave);
             this.weapon3PictureBox.MouseHover += new System.EventHandler(this.weapon3PictureBox_MouseHover);
@@ -129,6 +134,7 @@
             this.petPictureBox1.Size = new System.Drawing.Size(160, 160);
             this.petPictureBox1.TabIndex = 6;
             this.petPictureBox1.TabStop = false;
+            this.petPictureBox1.Click += new System.EventHandler(this.petPictureBox1_Click);
             this.petPictureBox1.MouseEnter += new System.EventHandler(this.petPictureBox1_MouseEnter);
             this.petPictureBox1.MouseLeave += new System.EventHandler(this.petPictureBox1_MouseLeave);
             this.petPictureBox1.MouseHover += new System.EventHandler(this.petPictureBox1_MouseHover);
@@ -142,6 +148,7 @@
             this.petPictureBox2.Size = new System.Drawing.Size(160, 160);
             this.petPictureBox2.TabIndex = 7;
             this.petPictureBox2.TabStop = false;
+            this.petPictureBox2.Click += new System.EventHandler(this.petPictureBox2_Click);
             this.petPictureBox2.MouseEnter += new System.EventHandler(this.petPictureBox2_MouseEnter);
             this.petPictureBox2.MouseLeave += new System.EventHandler(this.petPictureBox2_MouseLeave);
             this.petPictureBox2.MouseHover += new System.EventHandler(this.petPictureBox2_MouseHover);
@@ -155,9 +162,32 @@
             this.petPictureBox3.Size = new System.Drawing.Size(160, 160);
             this.petPictureBox3.TabIndex = 8;
             this.petPictureBox3.TabStop = false;
+            this.petPictureBox3.Click += new System.EventHandler(this.petPictureBox3_Click);
             this.petPictureBox3.MouseEnter += new System.EventHandler(this.petPictureBox3_MouseEnter);
             this.petPictureBox3.MouseLeave += new System.EventHandler(this.petPictureBox3_MouseLeave);
             this.petPictureBox3.MouseHover += new System.EventHandler(this.petPictureBox3_MouseHover);
+            // 
+            // weaponSelectedPictureBox
+            // 
+            this.weaponSelectedPictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.weaponSelectedPictureBox.Image = global::GameClicker.UI.Properties.Resources.GAlkaR;
+            this.weaponSelectedPictureBox.Location = new System.Drawing.Point(210, 158);
+            this.weaponSelectedPictureBox.Name = "weaponSelectedPictureBox";
+            this.weaponSelectedPictureBox.Size = new System.Drawing.Size(41, 41);
+            this.weaponSelectedPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.weaponSelectedPictureBox.TabIndex = 9;
+            this.weaponSelectedPictureBox.TabStop = false;
+            // 
+            // petSelectedPictureBox
+            // 
+            this.petSelectedPictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.petSelectedPictureBox.Image = global::GameClicker.UI.Properties.Resources.GAlkaR;
+            this.petSelectedPictureBox.Location = new System.Drawing.Point(210, 365);
+            this.petSelectedPictureBox.Name = "petSelectedPictureBox";
+            this.petSelectedPictureBox.Size = new System.Drawing.Size(41, 41);
+            this.petSelectedPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.petSelectedPictureBox.TabIndex = 10;
+            this.petSelectedPictureBox.TabStop = false;
             // 
             // InventoryForm
             // 
@@ -165,6 +195,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::GameClicker.UI.Properties.Resources.background;
             this.ClientSize = new System.Drawing.Size(780, 457);
+            this.Controls.Add(this.petSelectedPictureBox);
+            this.Controls.Add(this.weaponSelectedPictureBox);
             this.Controls.Add(this.petPictureBox3);
             this.Controls.Add(this.petPictureBox2);
             this.Controls.Add(this.petPictureBox1);
@@ -185,6 +217,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.petPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.petPictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.petPictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.weaponSelectedPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.petSelectedPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -201,5 +235,7 @@
         private System.Windows.Forms.PictureBox petPictureBox1;
         private System.Windows.Forms.PictureBox petPictureBox2;
         private System.Windows.Forms.PictureBox petPictureBox3;
+        private System.Windows.Forms.PictureBox weaponSelectedPictureBox;
+        private System.Windows.Forms.PictureBox petSelectedPictureBox;
     }
 }

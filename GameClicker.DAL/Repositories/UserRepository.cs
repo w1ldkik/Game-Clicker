@@ -33,5 +33,10 @@ namespace GameClicker.DAL.Repositories
             authContext.Update(updatedUser);
             authContext.SaveChanges();
         }
+
+        public User GetUserById(int id)
+        { 
+            return authContext.Users.Where(x =>x.Id == id).Include(x => x.Pet).Include(x => x.Weapon).FirstOrDefault();
+        }
     }
 }

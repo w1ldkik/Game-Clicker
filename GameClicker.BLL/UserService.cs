@@ -1,4 +1,5 @@
-﻿using GameClicker.DAL.Repositories;
+﻿using GameClicker.DAL.Models;
+using GameClicker.DAL.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,10 +18,14 @@ namespace GameClicker.BLL
             this.dataConteiner = dataConteiner;
         }
 
-        public void UserPick()
+        public void UpdateUser()
         {
             userRepository.Update(dataConteiner.User);
         }
            
+        public User GetUserById(int id)
+        {
+            return userRepository.GetUserById(id);
+        }
     }
 }

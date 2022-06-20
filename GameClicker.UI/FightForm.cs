@@ -92,6 +92,9 @@ namespace GameClicker.UI
                 case 1:
                     bossPictureBox.Image = GameClicker.UI.Properties.Resources.bossRoshan;
                     break;
+                case 2:
+                    bossPictureBox.Image = GameClicker.UI.Properties.Resources.Leviofan;
+                    break;
                 default:
                     break;
             }

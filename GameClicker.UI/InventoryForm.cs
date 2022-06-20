@@ -16,12 +16,18 @@ namespace GameClicker.UI
     public partial class InventoryForm : Form
     {
         public DataConteiner dataConteiner;
-        public AuthContext authContext;
-        public InventoryForm(DataConteiner dataConteiner, AuthContext authContext)
+        public UserService userService;
+        
+        public InventoryForm(DataConteiner dataConteiner, UserService userService)
         {
             InitializeComponent();
             this.dataConteiner = dataConteiner;
-            this.authContext = authContext;
+            this.userService = userService;
+            if (dataConteiner == null)
+            {
+                dataConteiner.User.Pet.Name = "Cat";
+                    }
+
         }
 
         private void weapon1PictureBox_MouseEnter(object sender, EventArgs e)
@@ -164,19 +170,114 @@ namespace GameClicker.UI
 
         private void weapon1PictureBox_Click(object sender, EventArgs e)
         {
-            dataConteiner.User.Weapon.Id = 3;
-            authContext.SaveChanges();
+            if (dataConteiner.User.Weapon.Name != "Pan") 
+            {
+                dataConteiner.User.WeaponId = 3;
+                dataConteiner.User.Weapon = null;
+                userService.UpdateUser();
+                dataConteiner.User = userService.GetUserById(dataConteiner.User.Id);
+                ApplySelectedItems();
+            }
+            
         }
 
         private void weapon2PictureBox_Click(object sender, EventArgs e)
         {
-            dataConteiner.User.Weapon.Id = 2;
-            authContext.SaveChanges();
+            if (dataConteiner.User.Weapon.Name != "Club")
+            {
+                dataConteiner.User.WeaponId = 2;
+                dataConteiner.User.Weapon = null;
+                userService.UpdateUser();
+                dataConteiner.User = userService.GetUserById(dataConteiner.User.Id);
+                ApplySelectedItems();
+            }
+
         }
 
+        public void ApplySelectedItems() 
+        {
+            switch (dataConteiner.User.Pet.Id)
+            {
+                case 3:
+                    petSelectedPictureBox.Location = new Point(210, 365);
+                    break;
+                case 2:
+                    petSelectedPictureBox.Location = new Point(465, 365);
+                    break;
+                case 1:
+                    petSelectedPictureBox.Location = new Point(732, 365);
+                    break;
+                default:
+                    break;
+            }
+
+            switch (dataConteiner.User.Weapon.Id)
+            {
+                case 3:
+                    weaponSelectedPictureBox.Location = new Point(210, 158);
+                    break;
+                case 2:
+                    weaponSelectedPictureBox.Location = new Point(465, 158);
+                    break;
+                case 1:
+                    weaponSelectedPictureBox.Location = new Point(732, 158);
+                    break;
+                default:
+                    break;
+            }
+        }
         private void InventoryForm_Load(object sender, EventArgs e)
         {
+            ApplySelectedItems();
 
+        }
+
+        private void weapon3PictureBox_Click(object sender, EventArgs e)
+        {
+            if (dataConteiner.User.Weapon.Name != "Sword")
+            {
+                dataConteiner.User.WeaponId = 1;
+                dataConteiner.User.Weapon = null;
+                userService.UpdateUser();
+                dataConteiner.User = userService.GetUserById(dataConteiner.User.Id);
+                ApplySelectedItems();
+            }
+        }
+
+        private void petPictureBox1_Click(object sender, EventArgs e)
+        {
+            if (dataConteiner.User.Pet.Name != "Hamster")
+            {
+                dataConteiner.User.PetId = 3;
+                dataConteiner.User.Pet = null;
+                userService.UpdateUser();
+                dataConteiner.User = userService.GetUserById(dataConteiner.User.Id);
+                ApplySelectedItems();
+            }
+        }
+
+        private void petPictureBox2_Click(object sender, EventArgs e)
+        {
+            if (dataConteiner.User.Pet.Name != "Cat")
+            {
+                dataConteiner.User.PetId = 2;
+                dataConteiner.User.Pet = null;
+                userService.UpdateUser();
+                dataConteiner.User = userService.GetUserById(dataConteiner.User.Id);
+                ApplySelectedItems();
+            }
+        }
+
+        private void petPictureBox3_Click(object sender, EventArgs e)
+        {
+            if (dataConteiner.User.Pet.Name != "Dog")
+            {
+                dataConteiner.User.PetId = 1;
+                dataConteiner.User.Pet = null;
+                userService.UpdateUser();
+                dataConteiner.User = userService.GetUserById(dataConteiner.User.Id);
+                ApplySelectedItems();
+            }
         }
     }
 }

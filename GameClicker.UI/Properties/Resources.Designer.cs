@@ -143,6 +143,16 @@ namespace GameClicker.UI.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap GAlkaR {
+            get {
+                object obj = ResourceManager.GetObject("GAlkaR", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap homka {
             get {
                 object obj = ResourceManager.GetObject("homka", resourceCulture);
@@ -196,6 +206,16 @@ namespace GameClicker.UI.Properties {
         internal static System.Drawing.Bitmap kittyBigDescr {
             get {
                 object obj = ResourceManager.GetObject("kittyBigDescr", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Leviofan {
+            get {
+                object obj = ResourceManager.GetObject("Leviofan", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

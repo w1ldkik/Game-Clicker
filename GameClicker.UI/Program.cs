@@ -42,7 +42,8 @@ namespace GameClicker.UI
                     .AddSingleton<DataConteiner>()
                     .AddSingleton<MainForm>()
                     .AddSingleton<PreparationForm>()
-                    .AddSingleton<FightForm>();
+                    .AddSingleton<FightForm>()
+                    .AddSingleton<UserService>();
             
         }
     }

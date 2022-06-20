@@ -18,13 +18,14 @@ namespace GameClicker.UI
     {
         public PreparationForm preparationForm;
         public DataConteiner dataConteiner;
-        public AuthContext authContext;
+        public UserService userService;
         
-        public MainForm(PreparationForm preparationForm, DataConteiner dataConteiner)
+        public MainForm(PreparationForm preparationForm, DataConteiner dataConteiner, UserService userService)
         {
             InitializeComponent();
-            this.preparationForm = preparationForm;
             this.dataConteiner = dataConteiner;
+            this.preparationForm = preparationForm;
+            this.userService = userService;
 
         }
 
@@ -36,7 +37,7 @@ namespace GameClicker.UI
         public void inventoryButton_Click(object sender, EventArgs e)
         {
             Hide();
-            var inventoryForm = new InventoryForm(dataConteiner, authContext);
+            var inventoryForm = new InventoryForm(dataConteiner, userService);
             inventoryForm.Show();
         }
 

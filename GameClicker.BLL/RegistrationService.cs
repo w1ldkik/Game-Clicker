@@ -26,8 +26,9 @@ namespace GameClicker.BLL
                 Login = login,
                 Password = password,
                 BossNumber = 1,
-                PetId = 1,
-                WeaponId = 1
+                PetId = 3,
+                WeaponId = 3
+                
 
             };
             userRepository.AddUser(user);
